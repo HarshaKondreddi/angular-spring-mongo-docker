@@ -19,10 +19,24 @@
     margin-right: 200px;
     margin-top: 100px;
   }
+  .input-group {
+    margin-bottom: 10px;
+  }
+  .text-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
 </style>
 <div class="content">
+  <h1>Hello Harsha! Welcome to your first angular app</h1>
   <p>Dockerize Angular app along with spring and mongoDB:</p>
-  <button class="button" (click)="addItem()">Add</button>
+  <div class="input-group">
+    <input type="text" [(ngModel)]="newItemText" placeholder="Enter item text" class="text-input">
+    <button class="button" (click)="addItem()" [disabled]="!newItemText">Add</button>
+  </div>
   <ul>
     <li *ngFor="let item of data">{{ item.itemName }}</li>
   </ul>

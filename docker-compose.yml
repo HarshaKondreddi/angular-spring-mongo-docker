@@ -34,7 +34,7 @@ services:
       context: ./Frontend
       dockerfile: Dockerfile
     ports:
-      - 4200:4200
+      - 4242:4200
     networks:
       - asmd_net
       
